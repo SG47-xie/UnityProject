@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Setting>
+  <Params>
+    <!-- 版本号 -->
+    <Version>0_0_9_1</Version>
+    <!-- 资源版本号 -->
+    <Resource>0_0_3_5</Resource>
+    <!-- SDK类型 0：自有散包、1：渠道包、2：派生包 -->
+    <Sdk>0</Sdk>
+    <!-- 是否是测试版本 0：不是、1：是 -->
+    <Test>1</Test>
+    <!-- 是否强制为Editor版本 0：不是、1：是 ,使用Editor服务器配置节点-->
+    <Editor>1</Editor> 
+    <!-- 显示Ping-->
+    <Ping>1</Ping>
+  </Params>
+  <Server>
+    <Publish  resftp="ftp://111.6.78.22/fishpublish" ftpport="45045" runftp="ftp://111.6.78.22/FishPublish" verdir="version"/>
+    <Test     resftp="ftp://111.6.78.22/fishpublish" ftpport="45045" runftp="ftp://111.6.78.22/FishPublish" verdir="test/test_version" />
+    <Editor   resftp="ftp://111.6.78.22/fishpublish"  ftpport="45045" runftp="ftp://111.6.78.22/FishPublish"  verdir="test/test_version">
+      <IP port="40056">111.6.78.22</IP>
+    </Editor>
+  </Server>
+  <Services>http://111.6.78.22</Services>
+  <Reporter port="45065">111.6.78.22</Reporter>
+</Setting>
